@@ -1,0 +1,378 @@
+/* CSS Custom Styles for Syria Events Guide */
+/* تعليق: ملف الأنماط الرئيسي للموقع - تصميم أزرق مع تركيز على الفعاليات السورية */
+
+:root {
+    --primary-color: #1e40af;
+    --secondary-color: #3b82f6;
+    --accent-color: #60a5fa;
+    --light-color: #dbeafe;
+    --dark-color: #1e3a8a;
+    --text-color: #334155;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --footer-bg: #1e3a8a;
+    --border-color: #e2e8f0;
+}
+
+.dark-theme {
+    --primary-color: #3b82f6;
+    --secondary-color: #60a5fa;
+    --accent-color: #93c5fd;
+    --light-color: #1e293b;
+    --dark-color: #0f172a;
+    --text-color: #e2e8f0;
+    --bg-color: #0f172a;
+    --card-bg: #7a8ead;
+    --footer-bg: #0f172a;
+    --border-color: #334155;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+    padding-top: 76px;
+}
+
+/* Header & Navigation */
+.navbar {
+    background-color: var(--primary-color) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+    font-weight: 600;
+}
+
+.navbar-brand img {
+    margin-left: 10px;
+}
+
+.nav-link.active {
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(30, 64, 175, 0.8), rgba(30, 64, 175, 0.9)), var(--bg-color);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-image-placeholder {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 60px;
+    backdrop-filter: blur(10px);
+}
+
+/* Section Titles */
+.section-title {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
+/* Event Cards */
+.event-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: var(--card-bg);
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.event-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Category Cards */
+.category-card {
+    padding: 2rem 1rem;
+    border-radius: 15px;
+    transition: transform 0.3s;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-icon {
+    width: 80px;
+    height: 80px;
+}
+
+/* Carousel */
+.carousel-image-placeholder {
+    height: 300px;
+    background: var(--primary-color);
+}
+
+.carousel-caption {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-color);
+    border-color: var(--dark-color);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Forms */
+.form-control, .form-select {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.25);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--footer-bg) !important;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer a {
+    color: var(--light-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: none;
+    z-index: 1000;
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+
+.scroll-to-top:hover {
+    background-color: var(--dark-color);
+    transform: translateY(-2px);
+}
+
+/* Utility Classes */
+.text-primary-custom {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary-custom {
+    background-color: var(--primary-color) !important;
+}
+
+.border-primary-custom {
+    border-color: var(--primary-color) !important;
+}
+
+/* Page Header */
+.page-header {
+    background: var(--bg-color);
+}
+
+/* Contact Icons */
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Icon Containers */
+.icon-container {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Event Image Placeholder */
+.event-image-placeholder {
+    background: var(--primary-color);
+    border-radius: 15px;
+}
+
+/* Team Cards */
+.team-card {
+    text-align: center;
+    padding: 2rem 1rem;
+    border-radius: 15px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-image-placeholder {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: white;
+    font-size: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    
+    .section-title::after {
+        width: 60px;
+    }
+    
+    .navbar-collapse {
+        background: var(--primary-color);
+        padding: 1rem;
+        border-radius: 10px;
+        margin-top: 1rem;
+    }
+}
+
+/* RTL Support */
+[dir="rtl"] .carousel-control-prev {
+    left: auto;
+    right: 0;
+}
+
+[dir="rtl"] .carousel-control-next {
+    right: auto;
+    left: 0;
+}
+
+/* Dark theme text colors */
+.dark-theme .text-muted {
+    color: #cbd5e1 !important;
+}
+
+.dark-theme .bg-light {
+    background-color: var(--light-color) !important;
+}
+
+/* Card styles for dark theme */
+.dark-theme .card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+/* Form styles for dark theme */
+.dark-theme .form-control,
+.dark-theme .form-select {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+/* Badge styles */
+.badge {
+    font-weight: 500;
+}
+
+/* Loading spinner */
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Alert styles */
+.alert {
+    border: none;
+    border-radius: 10px;
+}
+
+.alert-success {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.alert-danger {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.alert-warning {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.alert-info {
+    background-color: #dbeafe;
+    color: #1e40af;
+}

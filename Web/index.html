@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل فعاليات سوريا - الرئيسية</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="light-theme">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/logo.png" alt="شعار دليل فعاليات سوريا" width="40" height="40" class="d-inline-block align-top">
+                <span class="ms-2" data-translate="site_title">دليل فعاليات سوريا</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html" data-translate="home">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html" data-translate="events">الفعاليات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="event.html" data-translate="event_details">تفاصيل الفعالية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" data-translate="about">عن الدليل</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" data-translate="contact">اتصل بنا</a>
+                    </li>
+                </ul>
+
+                <!-- Theme and Language Switcher -->
+                <div class="d-flex align-items-center ms-3">
+                    <button id="themeToggle" class="btn btn-outline-light btn-sm me-2">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <img src="assets/img/syria-flag.png" alt="العربية" width="20" class="me-1">
+                            <span data-translate="language">العربية</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('ar')">
+                                <img src="assets/img/syria-flag.png" alt="العربية" width="20" class="me-1">
+                                العربية
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">
+                                <img src="assets/img/usa-flag.png" alt="English" width="20" class="me-1">
+                                English
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold text-white mb-4" data-translate="hero_title">اكتشف الفعاليات في سوريا</h1>
+                    <p class="lead text-white mb-4" data-translate="hero_subtitle">منصة شاملة للفعاليات الثقافية والترفيهية والتعليمية في جميع أنحاء سوريا</p>
+                    <a href="events.html" class="btn btn-light btn-lg px-4" data-translate="explore_events">
+                        <i class="fas fa-calendar-alt me-2"></i>استكشف الفعاليات
+                    </a>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="assets/img/event1.jpg" alt="فعاليات سوريا" class="img-fluid rounded-3 shadow-lg" style="max-height: 400px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Events -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-translate="featured_events">فعاليات بارزة هذا الأسبوع</h2>
+            
+            <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="2"></button>
+                </div>
+                
+                <div class="carousel-inner rounded-4">
+                    <div class="carousel-item active">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <img src="assets/img/event1.jpg" class="d-block w-100 rounded-3" alt="مهرجان دمشق الثقافي" style="height: 300px; object-fit: cover;">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="carousel-caption text-dark text-start position-static">
+                                    <h3 data-translate="event1_title">مهرجان دمشق الثقافي</h3>
+                                    <p data-translate="event1_desc">مهرجان سنوي يضم عروضاً مسرحية وموسيقية وفنية في العاصمة دمشق</p>
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <span class="badge bg-primary">ثقافة</span>
+                                        <span class="badge bg-secondary">دمشق</span>
+                                        <span class="badge bg-success">مجاني</span>
+                                    </div>
+                                    <a href="event.html?id=1" class="btn btn-primary">التفاصيل الكاملة</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <img src="assets/img/event2.jpg" class="d-block w-100 rounded-3" alt="معرض حلب للكتاب" style="height: 300px; object-fit: cover;">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="carousel-caption text-dark text-start position-static">
+                                    <h3 data-translate="event2_title">معرض حلب للكتاب</h3>
+                                    <p data-translate="event2_desc">أكبر معرض للكتاب في شمال سوريا بمشاركة دور نشر محلية وعربية</p>
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <span class="badge bg-primary">ثقافة</span>
+                                        <span class="badge bg-secondary">حلب</span>
+                                        <span class="badge bg-success">مجاني</span>
+                                    </div>
+                                    <a href="event.html?id=2" class="btn btn-primary">التفاصيل الكاملة</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <img src="assets/img/event3.jpg" class="d-block w-100 rounded-3" alt="مهرجان اللاذقية السينمائي" style="height: 300px; object-fit: cover;">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="carousel-caption text-dark text-start position-static">
+                                    <h3 data-translate="event3_title">مهرجان اللاذقية السينمائي</h3>
+                                    <p data-translate="event3_desc">عرض لأفضل الأفلام السورية والعربية في مدينة اللاذقية الساحلية</p>
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <span class="badge bg-primary">سينما</span>
+                                        <span class="badge bg-secondary">اللاذقية</span>
+                                        <span class="badge bg-warning text-dark">مدفوع</span>
+                                    </div>
+                                    <a href="event.html?id=3" class="btn btn-primary">التفاصيل الكاملة</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-translate="event_categories">تصنيفات الفعاليات</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-3 col-6">
+                    <div class="category-card text-center">
+                        <div class="category-icon bg-primary rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-theater-masks text-white fs-2"></i>
+                        </div>
+                        <h5 data-translate="category_culture">ثقافة</h5>
+                        <p class="text-muted">مسرح، معارض، أدب</p>
+                        <a href="events.html?category=culture" class="btn btn-outline-primary btn-sm">استكشف</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-6">
+                    <div class="category-card text-center">
+                        <div class="category-icon bg-success rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-running text-white fs-2"></i>
+                        </div>
+                        <h5 data-translate="category_sports">رياضة</h5>
+                        <p class="text-muted">مسابقات، ماراثونات</p>
+                        <a href="events.html?category=sports" class="btn btn-outline-success btn-sm">استكشف</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-6">
+                    <div class="category-card text-center">
+                        <div class="category-icon bg-info rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-music text-white fs-2"></i>
+                        </div>
+                        <h5 data-translate="category_music">موسيقى</h5>
+                        <p class="text-muted">حفلات، مهرجانات</p>
+                        <a href="events.html?category=music" class="btn btn-outline-info btn-sm">استكشف</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-6">
+                    <div class="category-card text-center">
+                        <div class="category-icon bg-warning rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-graduation-cap text-white fs-2"></i>
+                        </div>
+                        <h5 data-translate="category_education">تعليم</h5>
+                        <p class="text-muted">ندوات، ورش عمل</p>
+                        <a href="events.html?category=education" class="btn btn-outline-warning btn-sm">استكشف</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Events -->
+    <section class="py-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-5">
+                <h2 class="section-title mb-0" data-translate="latest_events">أحدث الفعاليات</h2>
+                <a href="events.html" class="btn btn-outline-primary">عرض الكل</a>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card event-card h-100">
+                        <img src="assets/img/event1.jpg" class="card-img-top" alt="مهرجان دمشق الثقافي" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-primary mb-2">ثقافة</span>
+                            <h5 class="card-title">مهرجان دمشق الثقافي</h5>
+                            <p class="card-text flex-grow-1">مهرجان سنوي يضم عروضاً مسرحية وموسيقية وفنية في العاصمة دمشق</p>
+                            <div class="mt-auto">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <small class="text-muted"><i class="fas fa-map-marker-alt me-1"></i> دمشق</small>
+                                    <small class="text-muted"><i class="fas fa-calendar me-1"></i> 2025-10-15</small>
+                                </div>
+                                <a href="event.html?id=1" class="btn btn-primary w-100">التفاصيل</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card event-card h-100">
+                        <img src="assets/img/event2.jpg" class="card-img-top" alt="معرض حلب للكتاب" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-primary mb-2">ثقافة</span>
+                            <h5 class="card-title">معرض حلب للكتاب</h5>
+                            <p class="card-text flex-grow-1">أكبر معرض للكتاب في شمال سوريا بمشاركة دور نشر محلية وعربية</p>
+                            <div class="mt-auto">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <small class="text-muted"><i class="fas fa-map-marker-alt me-1"></i> حلب</small>
+                                    <small class="text-muted"><i class="fas fa-calendar me-1"></i> 2025-11-05</small>
+                                </div>
+                                <a href="event.html?id=2" class="btn btn-primary w-100">التفاصيل</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card event-card h-100">
+                        <img src="assets/img/event3.jpg" class="card-img-top" alt="مهرجان اللاذقية السينمائي" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-primary mb-2">سينما</span>
+                            <h5 class="card-title">مهرجان اللاذقية السينمائي</h5>
+                            <p class="card-text flex-grow-1">عرض لأفضل الأفلام السورية والعربية في مدينة اللاذقية الساحلية</p>
+                            <div class="mt-auto">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <small class="text-muted"><i class="fas fa-map-marker-alt me-1"></i> اللاذقية</small>
+                                    <small class="text-muted"><i class="fas fa-calendar me-1"></i> 2025-09-20</small>
+                                </div>
+                                <a href="event.html?id=3" class="btn btn-primary w-100">التفاصيل</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card event-card h-100">
+                        <img src="assets/img/event1.jpg" class="card-img-top" alt="حفل موسيقي" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-info mb-2">موسيقى</span>
+                            <h5 class="card-title">حفل فرقة نور الشام</h5>
+                            <p class="card-text flex-grow-1">حفل موسيقي لفرقة نور الشام يقدمون فيه أغنياتهم الجديدة والقديمة</p>
+                            <div class="mt-auto">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <small class="text-muted"><i class="fas fa-map-marker-alt me-1"></i> دمشق</small>
+                                    <small class="text-muted"><i class="fas fa-calendar me-1"></i> 2025-10-25</small>
+                                </div>
+                                <a href="event.html?id=4" class="btn btn-primary w-100">التفاصيل</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-4" data-translate="site_title">دليل فعاليات سوريا</h5>
+                    <p class="text-light" data-translate="footer_desc">منصة شاملة للفعاليات الثقافية والترفيهية والتعليمية في جميع أنحاء سوريا</p>
+                </div>
+                
+                <div class="col-lg-2">
+                    <h6 class="text-white mb-4" data-translate="quick_links">روابط سريعة</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-light text-decoration-none" data-translate="home">الرئيسية</a></li>
+                        <li class="mb-2"><a href="events.html" class="text-light text-decoration-none" data-translate="events">الفعاليات</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-light text-decoration-none" data-translate="about">عن الدليل</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-light text-decoration-none" data-translate="contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h6 class="text-white mb-4" data-translate="event_categories">تصنيفات الفعاليات</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="events.html?category=culture" class="text-light text-decoration-none" data-translate="category_culture">ثقافة</a></li>
+                        <li class="mb-2"><a href="events.html?category=sports" class="text-light text-decoration-none" data-translate="category_sports">رياضة</a></li>
+                        <li class="mb-2"><a href="events.html?category=music" class="text-light text-decoration-none" data-translate="category_music">موسيقى</a></li>
+                        <li class="mb-2"><a href="events.html?category=education" class="text-light text-decoration-none" data-translate="category_education">تعليم</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h6 class="text-white mb-4" data-translate="contact_info">معلومات التواصل</h6>
+                    <ul class="list-unstyled text-light">
+                        <li class="mb-3">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            <span data-translate="address">دمشق، سوريا</span>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-envelope me-2"></i>
+                            <span data-translate="email">info@syriaevents.com</span>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-phone me-2"></i>
+                            <span data-translate="phone">+963 11 123 4567</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="bg-light my-5">
+            
+            <div class="text-center">
+                <p class="text-light mb-0" data-translate="copyright">جميع الحقوق محفوظة &copy; دليل فعاليات سوريا 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="btn btn-primary scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
